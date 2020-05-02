@@ -1,17 +1,23 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <Slide v-bind:slide-data="slides" />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "./components/HelloWorld.vue";
+import Slide from "@/components/Slide.vue";
+import slides from "./data/slides.json";
 
 @Component({
   components: {
-    HelloWorld
+    Slide
+  },
+  data() {
+    return {
+      slides: slides[0]
+    };
   }
 })
 export default class App extends Vue {}

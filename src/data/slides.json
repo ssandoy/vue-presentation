@@ -1,9 +1,21 @@
 [
   {
-    "title": "TITTEL",
+    "title": "Slide 1",
+    "notes": [
+      "Jeg liker sss vue",
+      "Savner React"
+    ],
+    "image": "/assets/logo.png"
+  },
+  {
+    "title": "Slide 2",
     "notes": [
       "Jeg liker ikke vue",
-      "Savner React"
-    ]
+      "Savner React",
+      "Templates og styr",
+      "Må lære seg ekstra DSL (overhead)",
+      "Må lære seg ekstra DSL (overhead)"
+    ],
+    "image": "/assets/vue-install.png"
   }
 ]

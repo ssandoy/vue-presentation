@@ -35,7 +35,8 @@ Vue.component('todo-item', {
 - Virtual DOM? Why is this good.
 
 ## BAD
-- JavaScript and HTML separated. Hard to grasp context.
+- JavaScript and HTML separated. Hard to grasp context. 
+   - Veldig rotete med litt templates i HTML, litt dependency injection og litt data, computed, methods osv..
 - Need to learn an extra DSL (Domain-Specific Language). HTML-templates
 - React -> onClick={customFunction()} 
 - Vue -> v-on:click="reverseMessage" Er det noe forskjell?..

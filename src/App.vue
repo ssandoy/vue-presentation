@@ -1,7 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <Slide v-bind:slide-data="slides" />
+    <div class="col-2">
+      <img alt="Vue logo" src="./assets/logo.png" />
+      <h1>Vue from my point of Vue</h1>
+    </div>
+    <div class="col-2">
+      <Slide :key="activeSlide" v-bind:slide-data="activeSlide" />
+      <ScopeStyledButton
+        v-bind:func="prevSlide"
+        button-text="Forrige"
+        :disabled="isPrevDisabled"
+      />
+      <ScopeStyledButton
+        v-bind:func="nextSlide"
+        button-text="Neste"
+        :disabled="isNextDisabled"
+      />
+    </div>
   </div>
 </template>
 
@@ -9,15 +24,41 @@
 import { Component, Vue } from "vue-property-decorator";
 import Slide from "@/components/Slide.vue";
 import slides from "./data/slides.json";
+import ScopeStyledButton from "@/components/ScopeStyledButton.vue";
 
 @Component({
   components: {
+    ScopeStyledButton,
     Slide
   },
-  data() {
+  data: function() {
     return {
-      slides: slides[0]
+      slides: slides,
+      activeSlide: slides[0]
     };
+  },
+  methods: {
+    prevSlide: function() {
+      this.$data.activeSlide = this.$data.slides[
+        this.$data.slides.indexOf(this.$data.activeSlide) - 1
+      ];
+    },
+    nextSlide: function() {
+      this.$data.activeSlide = this.$data.slides[
+        this.$data.slides.indexOf(this.$data.activeSlide) + 1
+      ];
+    }
+  },
+  computed: {
+    isPrevDisabled: function() {
+      return !this.$data.slides.indexOf(this.$data.activeSlide);
+    },
+    isNextDisabled: function() {
+      return (
+        this.$data.slides.indexOf(this.$data.activeSlide) ===
+        this.$data.slides.length - 1
+      );
+    }
   }
 })
 export default class App extends Vue {}
@@ -31,5 +72,12 @@ export default class App extends Vue {}
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
+
 </style>
+
+<!-- TODO LOAD SCSS FROM SOMEWHRE IN A COMPONENT. -->

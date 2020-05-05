@@ -3,10 +3,18 @@
     <h1 class="slide__title">{{ slideData.title }}</h1>
     <img
       v-if="slideData.image"
-      class="slide__image"
+      v-bind:class="{
+        slide__image: true,
+        'slide__image--half': !!slideData.notes.length,
+        'slide__image--whole': !slideData.notes.length
+      }"
       v-bind:src="slideData.image"
     />
-    <div class="slide__list">
+    <div
+      v-bind:class="{
+        slide__list: !!slideData.notes.length
+      }"
+    >
       <p
         class="slide__list__item"
         v-for="note in slideData.notes"
@@ -36,7 +44,7 @@ export default class Slide extends Vue {
 .slide {
   border: 1px solid black;
   width: 60vw;
-  height: 50vh;
+  height: 70vh;
   margin: 1rem 0;
 
   display: grid;
@@ -51,9 +59,18 @@ export default class Slide extends Vue {
   &__image {
     justify-self: center;
     align-self: center;
-    width: 100%;
-    grid-column: 4;
     grid-row: 3;
+
+    &--whole {
+      grid-column-start: 2;
+      grid-column-end: 5;
+      height: 100%;
+    }
+
+    &--half {
+      grid-column: 4;
+      width: 100%;
+    }
   }
 
   &__list {

@@ -32,7 +32,8 @@ Vue.component('todo-item', {
 ## GOOD
 - Scoped css?
 - Two-way databinding?
-- Virtual DOM? Why is this good.
+- Virtual DOM
+- Vue.js lets you extend HTML with HTML attributes called directives. Vue.js directives offers functionality to HTML applications
 
 ## BAD
 - JavaScript and HTML separated. Hard to grasp context. 

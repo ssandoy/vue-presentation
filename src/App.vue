@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <div class="col-2">
-      <img alt="Vue logo" src="./assets/logo.png" />
-      <h1>Vue from my point of Vue</h1>
+      <h1>
+        <img alt="Vue logo" src="./assets/logo.png" class="app__logo" /> Vue,
+        from my point of Vue
+        <img alt="Vue logo" src="./assets/logo.png" class="app__logo" />
+      </h1>
     </div>
     <div class="col-2">
       <Slide :key="activeSlide" v-bind:slide-data="activeSlide" />
@@ -77,7 +80,11 @@ export default class App extends Vue {}
   align-items: center;
   flex-direction: column;
 }
-
+.app__logo {
+  height: 60px;
+}
 </style>
 
 <!-- TODO LOAD SCSS FROM SOMEWHRE IN A COMPONENT. -->
+
+<!-- TODO RENAEM Col-2 -->

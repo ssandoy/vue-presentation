@@ -1,6 +1,7 @@
 [
   {
-    "title": "VUE, FROM MY POINT OF VUE",
+    "title": "UE, FROM MY POINT OF VUE",
+    "titleIcon": "/assets/logo.png",
     "notes": [
     ],
     "image": "/assets/vuevsreact.jpg"
@@ -10,20 +11,20 @@
     "notes": [
       "JavaScript rammeverk",
       "Basert på de beste featurene fra Angular og React",
-      "Lettvekt og lett å integrere med andre rammeverk",
-      "HTML Templates og Vue-directives",
-      "TODO VUE DIRECTIVES EGEN SLIDE"
+      "Lettvekt og lett å integrere",
+      "NOE MER"
     ],
-    "image": "/assets/logo.png"
+    "image": "/assets/vuereactangular.png"
   },
   {
     "title": "VUE FEATURES",
     "notes": [
-      "HTML Templates",
       "Virtuell DOM",
-      "Komponentbasert (Reusable)",
+      "HTML Templates",
+      "Vue Directives",
+      "Komponentbasert",
       "Vue CLI",
-      "Scoped i .vue-filer"
+      "Scoped"
     ],
     "image": "/assets/vue-component.png"
   },
@@ -43,14 +44,14 @@
     "image": "/assets/vue-component-2.png"
   },
   {
+    "title": "VUE DIRECTIVEs",
+    "notes": ["TODO"],
+    "image": "/assets/vue-template.png"
+  },
+  {
     "title": "VUE CLI",
     "notes": [],
     "image": "/assets/vue-install.png"
-  },
-  {
-    "title": "Vue CLI",
-    "notes": [],
-    "image": "/assets/vue-install3.png"
   },
   {
     "title": "Vue CLI",

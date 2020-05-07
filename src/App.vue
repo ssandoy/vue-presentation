@@ -8,7 +8,9 @@
           button-text="<"
           :disabled="isPrevDisabled"
         />
-        <div class="app__slide-number">{{ slides.indexOf(activeSlide) + 1 }}</div>
+        <div class="app__slide-number">
+          {{ slides.indexOf(activeSlide) + 1 }}
+        </div>
         <ScopeStyledButton
           v-bind:func="nextSlide"
           button-text=">"
@@ -64,9 +66,9 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-  body {
-    background-color: #f2f2f2;
-  }
+body {
+  background-color: #f2f2f2;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

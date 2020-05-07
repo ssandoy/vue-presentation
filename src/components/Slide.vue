@@ -1,6 +1,14 @@
 <template>
   <div class="slide">
-    <h1 class="slide__title">{{ slideData.title }}</h1>
+    <h1 class="slide__title">
+      <img
+        class="slide__title-icon"
+        v-if="slideData.titleIcon"
+        v-bind:src="slideData.titleIcon"
+        alt="title-icon"
+      />
+      {{ slideData.title }}
+    </h1>
     <div class="slide__container">
       <img
         v-if="slideData.image"
@@ -32,6 +40,7 @@
 import { Component, Prop, Vue } from "vue-property-decorator";
 type SlideData = {
   title: string;
+  titleIcon?: string;
   image?: string;
   notes: string[];
 };
@@ -56,6 +65,10 @@ export default class Slide extends Vue {
     grid-template-rows: 10% 80% 10%;
   }
 
+  &__title-icon {
+    height: 35px;
+    margin-right: -15px;
+  }
 
   &__image {
     justify-self: center;
@@ -84,11 +97,12 @@ export default class Slide extends Vue {
     justify-content: space-around;
     height: 100%;
     p {
-      text-align: left;
+      text-align: right;
       font-size: 20px;
+      color: black;
       margin: 5px;
       &:before {
-        content: "-";
+        /*content: "-";*/
         margin-right: 10px;
       }
     }

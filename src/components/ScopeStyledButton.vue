@@ -1,5 +1,7 @@
 <template>
-  <button v-on:click="func" class="scope-styled-button" :disabled="disabled">{{ buttonText }}</button>
+  <button v-on:click="func" class="scope-styled-button" :disabled="disabled">
+    {{ buttonText }}
+  </button>
 </template>
 
 <script lang="ts">
@@ -15,7 +17,11 @@ export default class ScopeStyledButton extends Vue {
 
 <style scoped lang="scss">
 .scope-styled-button {
-  background-color: deeppink;
-  color: deepskyblue;
+  border-radius: 50%;
+  border: none;
+  background-color: #d2d2d2;
+  width: 30px;
+  height: 30px;
+  color: white;
 }
 </style>

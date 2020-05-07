@@ -1,22 +1,23 @@
 [
   {
-    "title": "Slide 1",
+    "title": "VUE, FROM MY POINT OF VUE",
     "notes": [
     ],
     "image": "/assets/vuevsreact.jpg"
   },
   {
-    "title": "Hva er Vue?",
+    "title": "HVA ER VUE?",
     "notes": [
       "JavaScript rammeverk",
-      "'Bygd basert på de beste featurene fra Angular og React'",
+      "Basert på de beste featurene fra Angular og React",
       "Lettvekt og lett å integrere med andre rammeverk",
-      "HTML Templates og Vue-directives"
+      "HTML Templates og Vue-directives",
+      "TODO VUE DIRECTIVES EGEN SLIDE"
     ],
     "image": "/assets/logo.png"
   },
   {
-    "title": "Vue features",
+    "title": "VUE FEATURES",
     "notes": [
       "HTML Templates",
       "Virtuell DOM",
@@ -27,22 +28,22 @@
     "image": "/assets/vue-component.png"
   },
   {
-    "title": "HTML Templates",
+    "title": "HTML TEMPLATES",
     "notes": [],
     "image": "/assets/vue-template.png"
   },
   {
-    "title": "Vue Components",
+    "title": "VUE COMPONENTS",
     "notes": [],
     "image": "/assets/vue-component.png"
   },
   {
-    "title": "Vue Components",
+    "title": "VUE COMPONENTS",
     "notes": [],
     "image": "/assets/vue-component-2.png"
   },
   {
-    "title": "Vue CLI",
+    "title": "VUE CLI",
     "notes": [],
     "image": "/assets/vue-install.png"
   },
@@ -57,16 +58,15 @@
     "image": "/assets/vue-install4.png"
   },
   {
-    "title": "Vue CLI",
+    "title": "VUE CLI",
     "notes": [],
     "image": "/assets/vue-install5.png"
   },
   {
-    "title": "Egen erfaring",
+    "title": "EGEN ERFARING",
     "notes": [
       "Likte godt scoped css",
       "Litt mye overhead med templates og div directives."
-    ],
-    "image": "/assets/vue-install.png"
+    ]
   }
 ]

@@ -1,24 +1,20 @@
 <template>
   <div id="app">
     <div class="col-2">
-      <h1>
-        <img alt="Vue logo" src="./assets/logo.png" class="app__logo" /> Vue,
-        from my point of Vue
-        <img alt="Vue logo" src="./assets/logo.png" class="app__logo" />
-      </h1>
-    </div>
-    <div class="col-2">
       <Slide :key="activeSlide" v-bind:slide-data="activeSlide" />
-      <ScopeStyledButton
-        v-bind:func="prevSlide"
-        button-text="Forrige"
-        :disabled="isPrevDisabled"
-      />
-      <ScopeStyledButton
-        v-bind:func="nextSlide"
-        button-text="Neste"
-        :disabled="isNextDisabled"
-      />
+      <div class="app__button-group">
+        <ScopeStyledButton
+          v-bind:func="prevSlide"
+          button-text="<"
+          :disabled="isPrevDisabled"
+        />
+        <div class="app__slide-number">{{ slides.indexOf(activeSlide) + 1 }}</div>
+        <ScopeStyledButton
+          v-bind:func="nextSlide"
+          button-text=">"
+          :disabled="isNextDisabled"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -68,6 +64,9 @@ export default class App extends Vue {}
 </script>
 
 <style lang="scss">
+  body {
+    background-color: #f2f2f2;
+  }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -80,8 +79,30 @@ export default class App extends Vue {}
   align-items: center;
   flex-direction: column;
 }
-.app__logo {
-  height: 60px;
+.app {
+  &__logo {
+    height: 60px;
+  }
+
+  &__slide-number {
+    border-radius: 50%;
+    background-color: #42b983;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+
+  &__button-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    button {
+      margin: 0 5px;
+    }
+  }
 }
 </style>
 

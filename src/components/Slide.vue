@@ -1,14 +1,16 @@
 <template>
   <div class="slide">
-    <h1 class="slide__title">
+    <div class="slide__title">
+      <h1 v-if="slideData.title" class="slide__title--h1">
+        {{ slideData.title }}
+      </h1>
       <img
-        class="slide__title-icon"
+        class="slide__title--icon"
         v-if="slideData.titleIcon"
         v-bind:src="slideData.titleIcon"
         alt="title-icon"
       />
-      {{ slideData.title }}
-    </h1>
+    </div>
     <div class="slide__container">
       <img
         v-if="slideData.image"
@@ -61,13 +63,17 @@ export default class Slide extends Vue {
     background-color: white;
 
     display: grid;
-    grid-template-columns: 5% 42% 5% 42% 5%;
+    grid-template-columns: 5% 35% 5% 50% 5%;
     grid-template-rows: 10% 80% 10%;
   }
 
-  &__title-icon {
-    height: 35px;
-    margin-right: -15px;
+  &__title {
+    &--icon {
+      height: 50px;
+    }
+    &--h1 {
+      margin: 0;
+    }
   }
 
   &__image {

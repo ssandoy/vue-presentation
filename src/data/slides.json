@@ -1,9 +1,7 @@
 [
   {
-    "title": "UE, FROM MY POINT OF VUE",
-    "titleIcon": "/assets/logo.png",
-    "notes": [
-    ],
+    "titleIcon": "/assets/vue-title.png",
+    "notes": [],
     "image": "/assets/vuevsreact.jpg"
   },
   {
@@ -24,13 +22,23 @@
       "Vue Directives",
       "Komponentbasert",
       "Vue CLI",
-      "Scoped"
+      "Scoped i .vue"
     ],
     "image": "/assets/vue-component.png"
   },
   {
     "title": "HTML TEMPLATES",
     "notes": [],
+    "image": "/assets/vue-template.png"
+  },
+  {
+    "title": "VUE DIRECTIVES",
+    "notes": [
+      "Custom HTML-attributes",
+      "Brukt for å binde JS og HTML",
+      "Conditional rendering og loops",
+      "Two-way binde input til en JS-model"
+    ],
     "image": "/assets/vue-template.png"
   },
   {
@@ -42,11 +50,6 @@
     "title": "VUE COMPONENTS",
     "notes": [],
     "image": "/assets/vue-component-2.png"
-  },
-  {
-    "title": "VUE DIRECTIVEs",
-    "notes": ["TODO"],
-    "image": "/assets/vue-template.png"
   },
   {
     "title": "VUE CLI",
@@ -67,7 +70,8 @@
     "title": "EGEN ERFARING",
     "notes": [
       "Likte godt scoped css",
-      "Litt mye overhead med templates og div directives."
+      "Litt mye overhead med templates og div directives.",
+      "Bra dokumentasjon!"
     ]
   }
 ]

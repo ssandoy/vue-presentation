@@ -11,7 +11,7 @@
         alt="title-icon"
       />
     </div>
-    <div class="slide__container">
+    <div v-if="slideData.image || slideData.notes.length" class="slide__container">
       <img
         v-if="slideData.image"
         v-bind:class="{
@@ -58,7 +58,7 @@ export default class Slide extends Vue {
   &__container {
     border: 1px solid black;
     width: 60vw;
-    height: 70vh;
+    height: 75vh;
     margin: 1rem 0;
     background-color: white;
 
@@ -69,7 +69,7 @@ export default class Slide extends Vue {
 
   &__title {
     &--icon {
-      height: 50px;
+      height: 60px;
     }
     &--h1 {
       margin: 0;
@@ -100,7 +100,7 @@ export default class Slide extends Vue {
     align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     height: 100%;
     p {
       text-align: right;

@@ -8,9 +8,9 @@
     "title": "HVA ER VUE?",
     "notes": [
       "JavaScript rammeverk",
+      "Hobbyprosjekt ➡️ 164K \uD83C\uDF1F på Github",
       "Basert på de beste featurene fra Angular og React",
-      "Lettvekt og lett å integrere",
-      "NOE MER"
+      "Lettvekt og lett å integrere"
     ],
     "image": "/assets/vuereactangular.png"
   },
@@ -35,11 +35,11 @@
     "title": "VUE DIRECTIVES",
     "notes": [
       "Custom HTML-attributes",
-      "Brukt for å binde JS og HTML",
-      "Conditional rendering og loops",
-      "Two-way binde input til en JS-model"
+      "Prefixet med v-",
+      "Binde JS og HTML",
+      "Conditional rendering og loops"
     ],
-    "image": "/assets/vue-template.png"
+    "image": "/assets/vue-directives.png"
   },
   {
     "title": "VUE COMPONENTS",
@@ -52,9 +52,14 @@
     "image": "/assets/vue-component-2.png"
   },
   {
-    "title": "VUE CLI",
-    "notes": [],
-    "image": "/assets/vue-install.png"
+    "title": "VERDT Å NEVNE",
+    "notes": [
+      "Vuex",
+      "Lifecycle hooks",
+      "EventHandling vha. Vue Directives",
+      "Vue DevTools"
+    ],
+    "image": "/assets/somanythings.png"
   },
   {
     "title": "Vue CLI",
@@ -62,16 +67,7 @@
     "image": "/assets/vue-install4.png"
   },
   {
-    "title": "VUE CLI",
-    "notes": [],
-    "image": "/assets/vue-install5.png"
-  },
-  {
-    "title": "EGEN ERFARING",
-    "notes": [
-      "Likte godt scoped css",
-      "Litt mye overhead med templates og div directives.",
-      "Bra dokumentasjon!"
-    ]
+    "title": "Takk for meg!",
+    "notes": []
   }
 ]

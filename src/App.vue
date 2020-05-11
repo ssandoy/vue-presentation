@@ -1,22 +1,20 @@
 <template>
   <div id="app">
-    <div class="col-2">
-      <Slide :key="activeSlide" v-bind:slide-data="activeSlide" />
-      <div class="app__button-group">
-        <ScopeStyledButton
-          v-bind:func="prevSlide"
-          button-text="<"
-          :disabled="isPrevDisabled"
-        />
-        <div class="app__slide-number">
-          {{ slides.indexOf(activeSlide) + 1 }}
-        </div>
-        <ScopeStyledButton
-          v-bind:func="nextSlide"
-          button-text=">"
-          :disabled="isNextDisabled"
-        />
+    <Slide :key="activeSlide" v-bind:slide-data="activeSlide" />
+    <div class="app__button-group">
+      <ScopeStyledButton
+        v-bind:func="prevSlide"
+        button-text="<"
+        v-bind:disabled="isPrevDisabled"
+      />
+      <div class="app__slide-number">
+        {{ slides.indexOf(activeSlide) + 1 }}
       </div>
+      <ScopeStyledButton
+        v-bind:func="nextSlide"
+        button-text=">"
+        v-bind:disabled="isNextDisabled"
+      />
     </div>
   </div>
 </template>
@@ -70,8 +68,7 @@ body {
   background-color: #f2f2f2;
 }
 #app {
-  /*font-family: Avenir, Helvetica, Arial, sans-serif;*/
-  font-family: Impact serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -108,6 +105,15 @@ body {
   }
 }
 
+h1 {
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: HPImpact;
+  src: url("./assets/HP-Impact.ttf");
+}
+
 @font-face {
   font-family: Impact;
   src: url("./assets/impact.ttf");
@@ -115,5 +121,3 @@ body {
 </style>
 
 <!-- TODO LOAD SCSS FROM SOMEWHRE IN A COMPONENT. -->
-
-<!-- TODO RENAEM Col-2 -->
